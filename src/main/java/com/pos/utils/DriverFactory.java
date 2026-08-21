@@ -47,6 +47,7 @@ public class DriverFactory {
 
 
     // Initialize browser
+
     public static void initializeDriver() {
 
         // Load properties
@@ -69,7 +70,7 @@ public class DriverFactory {
 
             case "chrome":
 
-                WebDriverManager.chromedriver().setup();
+//                WebDriverManager.chromedriver().setup();
 
                 driver = new ChromeDriver();
 
@@ -78,7 +79,7 @@ public class DriverFactory {
 
             case "firefox":
 
-                WebDriverManager.firefoxdriver().setup();
+//                WebDriverManager.firefoxdriver().setup();
 
                 driver = new FirefoxDriver();
 
@@ -87,7 +88,7 @@ public class DriverFactory {
 
             case "edge":
 
-                WebDriverManager.edgedriver().setup();
+//                WebDriverManager.edgedriver().setup();
 
                 driver = new EdgeDriver();
 

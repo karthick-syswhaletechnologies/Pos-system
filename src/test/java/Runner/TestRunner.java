@@ -2,13 +2,14 @@ package Runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/feature",
         glue = {
-                "stepdefinitions/BrowserSteps",
+                "stepdefinitions",
                 "hooks"
         },
         plugin = {
@@ -17,5 +18,5 @@ import org.junit.runner.RunWith;
         },
         monochrome = true
 )
-public class TestRunner {
+public class TestRunner extends AbstractTestNGCucumberTests {
 }

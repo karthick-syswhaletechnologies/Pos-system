@@ -22,6 +22,6 @@ public class BrowserSteps {
         String url = DriverFactory.getUrl();
 
         DriverFactory.getDriver().get(url);
-        Thread.sleep(5000);
+//        Thread.sleep(5000);
     }
 }
