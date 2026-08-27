@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/feature",
         glue = {
-                "stepdefinitions/BrowserSteps",
+                "stepdefinitions",
                 "hooks"
         },
         plugin = {
