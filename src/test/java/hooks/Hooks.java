@@ -21,6 +21,6 @@ public class Hooks {
 
         System.out.println("===== Closing Browser =====");
 
-        DriverFactory.quitDriver();
+        //DriverFactory.quitDriver();
     }
 }
