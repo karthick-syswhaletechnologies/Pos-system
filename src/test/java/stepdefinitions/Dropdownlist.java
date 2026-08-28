@@ -112,6 +112,44 @@ public class Dropdownlist {
     public void enter_fields_dropdown_type_filter_by_and_item_name() {
 
 
+
+
+
+
+//        Organization
+        WebElement organization = driver.findElement(By.xpath("//select[@name='organization_id']"));
+        organization.click();
+
+        // Create Select object
+        Select select = new Select(organization);
+
+        // Select POS System Organization
+        select.selectByVisibleText("POS System Organization");
+
+        // Select Branch Code
+
+        WebElement branchCode = driver.findElement(By.xpath("//input[@name='branch_code']"));
+        branchCode.sendKeys("SA001");
+
+        // Select the BranchName
+
+        WebElement branchName = driver.findElement(By.xpath("//input[@name='branch_name']"));
+        branchName.sendKeys("POS-SYSTEM");
+
+
+//        Service Type
+        WebElement serviceType = driver.findElement(By.xpath("//input[@name='service_type']"));
+        serviceType.sendKeys("123456");
+
+
+//        Select POS Organization
+
+//        WebElement seleTPOS = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/form/div[1]/div/div[1]/select/option[2]"));
+//        seleTPOS.click();
+
+//        driver.findElement(By.xpath(""))
+
+
     }
 
     @Then("Save Dropdown list")
