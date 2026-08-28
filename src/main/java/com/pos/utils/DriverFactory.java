@@ -74,6 +74,7 @@ public class DriverFactory {
 
                 driver = new ChromeDriver();
 
+
                 break;
 
 
@@ -146,7 +147,7 @@ public class DriverFactory {
 
         if (driver != null) {
 
-            driver.quit();
+//            driver.quit();
 
             driver = null;
         }

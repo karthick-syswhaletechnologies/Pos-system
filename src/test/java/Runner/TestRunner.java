@@ -11,7 +11,10 @@ import org.junit.runner.RunWith;
         glue = {
                 "stepdefinitions",
                 "hooks"
-        },
+        }
+        ,
+
+//        tags = "@smoke",
         plugin = {
                 "pretty",
                 "html:target/cucumber-report.html"
@@ -19,4 +22,5 @@ import org.junit.runner.RunWith;
         monochrome = true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
+
 }
