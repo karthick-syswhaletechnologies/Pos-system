@@ -1,5 +1,5 @@
 Feature: Browser Launch
 
   Scenario: Launch browser
-#    Given I launch the browser
-    Given I lauch the chromeBrowser
+#    Given User launch the browser
+    Given User launch the browser
