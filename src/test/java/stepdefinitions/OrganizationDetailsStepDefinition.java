@@ -23,7 +23,7 @@ public class OrganizationDetailsStepDefinition {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    @When("I click Admin")
+    @When("User clicks Admin")
     public void clickAdmin() {
         setup();
 
@@ -34,7 +34,7 @@ public class OrganizationDetailsStepDefinition {
         System.out.println("Admin Clicked");
     }
 
-    @And("I click Organization Details")
+    @And("User clicks Organization Details")
     public void clickOrganizationDetails() {
         setup();
 
@@ -69,7 +69,7 @@ public class OrganizationDetailsStepDefinition {
         System.out.println("Add New button displayed successfully");
     }
 
-    @Then("I click Add New")
+    @Then("User clicks Add New")
     public void clickAddNew() {
         setup();
 
@@ -105,67 +105,108 @@ public class OrganizationDetailsStepDefinition {
         System.out.println("Organization creation form displayed successfully");
     }
 
-    @And("I enter Organization Name {string}")
+    @And("User enters Organization Name {string}")
     public void enterOrganizationName(String organizationName) {
         setup();
 
-        WebElement organizationNameField = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(
-                        By.name("org_name")
-                )
-        );
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.name("org_name")
+        )).sendKeys(organizationName);
 
-        organizationNameField.clear();
-        organizationNameField.sendKeys(organizationName);
-
-        System.out.println("Organization Name entered: " + organizationName);
+        System.out.println("Organization Name entered");
     }
 
-    @And("I enter Registration Number {string}")
+    @And("User enters Registration Number {string}")
     public void enterRegistrationNumber(String registrationNumber) {
         setup();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[@placeholder='Registration No']")
+                By.name("registration_no")
         )).sendKeys(registrationNumber);
 
         System.out.println("Registration Number entered");
     }
 
-    @And("I enter TIN Number {string}")
+    @And("User enters TIN Number {string}")
     public void enterTINNumber(String tinNumber) {
         setup();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[@placeholder='TIN No']")
+                By.name("tin_no")
         )).sendKeys(tinNumber);
 
         System.out.println("TIN Number entered");
     }
 
-    @And("I enter Address {string}")
+    @And("User enters Address {string}")
     public void enterAddress(String address) {
         setup();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[@placeholder='Address']")
+                By.name("address")
         )).sendKeys(address);
 
         System.out.println("Address entered");
     }
 
-    @And("I enter Location {string}")
+    @And("User enters Location {string}")
     public void enterLocation(String location) {
         setup();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[@placeholder='Location']")
+                By.name("location")
         )).sendKeys(location);
 
         System.out.println("Location entered");
     }
 
-    @And("I enter Postcode {string}")
+    @And("User selects Country {string}")
+    public void selectCountry(String country) {
+
+        setup();
+
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//div[contains(@class,'app-custom-dropdown-selected') and contains(.,'Select Country')]")
+        )).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//div[normalize-space()='" + country + "']")
+        )).click();
+
+        System.out.println("Country selected: " + country);
+    }
+
+    @And("User selects State {string}")
+    public void selectState(String state) {
+        setup();
+
+        driver.findElement(By.xpath(
+                "//div[contains(@class,'app-custom-dropdown-selected') and normalize-space()='Select State']"
+        )).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//*[normalize-space()='" + state + "']")
+        )).click();
+
+        System.out.println("State selected: " + state);
+    }
+
+    @And("User selects District {string}")
+    public void selectDistrict(String district) {
+        setup();
+
+        driver.findElement(By.xpath(
+                "//div[contains(@class,'app-custom-dropdown-selected') and normalize-space()='Select District']"
+        )).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//*[normalize-space()='" + district + "']")
+        )).click();
+
+        System.out.println("District selected: " + district);
+    }
+
+    @And("User enters Postcode {string}")
     public void enterPostcode(String postcode) {
         setup();
 
@@ -176,7 +217,7 @@ public class OrganizationDetailsStepDefinition {
         System.out.println("Postcode entered");
     }
 
-    @And("I enter Contact Number {string}")
+    @And("User enters Contact Number {string}")
     public void enterContactNumber(String contactNumber) {
         setup();
 
@@ -187,7 +228,7 @@ public class OrganizationDetailsStepDefinition {
         System.out.println("Contact Number entered");
     }
 
-    @And("I click Organization Save button")
+    @And("User clicks Organization Save button")
     public void clickOrganizationSaveButton() {
         setup();
 

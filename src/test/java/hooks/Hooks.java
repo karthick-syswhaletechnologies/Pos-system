@@ -3,17 +3,23 @@ package hooks;
 import com.pos.utils.DriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 
 public class Hooks {
 
     @Before
-    public void setUp() {
+    public void setUp(Scenario scenario) {
+
+        if (scenario.getSourceTagNames().contains("@API")) {
+            return;
+        }
 
         System.out.println("===== Starting Browser =====");
 
         DriverFactory.initializeDriver();
     }
+
 
 
     @After

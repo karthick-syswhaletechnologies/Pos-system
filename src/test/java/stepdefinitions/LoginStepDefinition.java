@@ -21,7 +21,7 @@ public class LoginStepDefinition {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    @When("I open the POS System login page")
+    @When("User opens the POS System login page")
     public void openLoginPage() {
 
         setup();
@@ -31,7 +31,7 @@ public class LoginStepDefinition {
         System.out.println("Login page opened");
     }
 
-    @And("I enter Branch Code {string}")
+    @And("User enters Branch Code {string}")
     public void enterBranchCode(String branchCode) {
 
         setup();
@@ -47,7 +47,7 @@ public class LoginStepDefinition {
         System.out.println("Branch Code entered");
     }
 
-    @And("I enter User Id {string}")
+    @And("User enters User Id {string}")
     public void enterUserId(String userId) {
 
         setup();
@@ -63,7 +63,7 @@ public class LoginStepDefinition {
         System.out.println("User Id entered");
     }
 
-    @And("I enter Password {string}")
+    @And("User enters Password {string}")
     public void enterPassword(String password) {
 
         setup();
@@ -79,7 +79,7 @@ public class LoginStepDefinition {
         System.out.println("Password entered");
     }
 
-    @And("I click the Login button")
+    @And("User clicks the Login button")
     public void clickLoginButton() {
 
         setup();
@@ -93,7 +93,7 @@ public class LoginStepDefinition {
         System.out.println("Login button clicked");
     }
 
-    @And("I click Get Started")
+    @And("User clicks Get Started")
     public void clickGetStarted() {
 
         setup();
@@ -107,7 +107,7 @@ public class LoginStepDefinition {
         System.out.println("Get Started clicked");
     }
 
-    @And("I click the branch dropdown")
+    @And("User clicks the branch dropdown")
     public void clickBranchDropdown() {
 
         setup();
@@ -126,7 +126,8 @@ public class LoginStepDefinition {
 
         System.out.println("Select Branch clicked successfully");
     }
-    @And("I select Super Admin Branch")
+
+    @And("User selects Super Admin Branch")
     public void selectSuperAdminBranch() {
 
         setup();
@@ -145,7 +146,8 @@ public class LoginStepDefinition {
 
         System.out.println("Super Admin Branch selected successfully");
     }
-    @And("I click OK")
+
+    @And("User clicks OK")
     public void clickOK() {
 
         setup();

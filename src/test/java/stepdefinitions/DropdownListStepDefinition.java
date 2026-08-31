@@ -17,15 +17,12 @@ public class DropdownListStepDefinition {
     WebDriver driver;
     WebDriverWait wait;
 
-
     private void setup() {
-
         driver = DriverFactory.getDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-
-    @When("I click Staff and User")
+    @When("User clicks Staff and User")
     public void clickStaffAndUser() {
 
         setup();
@@ -37,8 +34,7 @@ public class DropdownListStepDefinition {
         ).click();
     }
 
-
-    @And("I click Dropdownlist")
+    @And("User clicks Dropdownlist")
     public void clickDropdownlist() {
 
         setup();
@@ -49,17 +45,18 @@ public class DropdownListStepDefinition {
                 )
         ).click();
     }
-    @And("I select {string} from Dropdown Type")
+
+    @And("User selects {string} from Dropdown Type")
     public void selectDropdownType(String type) {
 
         setup();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
         Select dropdownType = new Select(
                 wait.until(
                         ExpectedConditions.elementToBeClickable(
-                                By.xpath("//select[option[normalize-space()='state'] and option[normalize-space()='country'] and option[normalize-space()='district']]")
+                                By.xpath(
+                                        "//select[option[normalize-space()='state'] and option[normalize-space()='country'] and option[normalize-space()='district']]"
+                                )
                         )
                 )
         );
@@ -69,9 +66,7 @@ public class DropdownListStepDefinition {
         System.out.println("Dropdown Type selected: " + type);
     }
 
-
-
-    @And("I select {string} from Filter By")
+    @And("User selects {string} from Filter By")
     public void selectFilterBy(String filter) {
 
         setup();
@@ -89,8 +84,7 @@ public class DropdownListStepDefinition {
         filterBy.selectByVisibleText(filter);
     }
 
-
-    @And("I enter {string} in Item Name")
+    @And("User enters {string} in Item Name")
     public void enterItemName(String itemName) {
 
         setup();
@@ -102,8 +96,7 @@ public class DropdownListStepDefinition {
         ).sendKeys(itemName);
     }
 
-
-    @And("I click Save")
+    @And("User clicks Save")
     public void clickSave() {
 
         setup();
@@ -115,7 +108,6 @@ public class DropdownListStepDefinition {
         ).click();
     }
 
-
     @Then("the State dropdown value should be displayed")
     public void stateDropdownValueShouldBeDisplayed() {
 
@@ -123,9 +115,7 @@ public class DropdownListStepDefinition {
 
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath(
-                                "//*[normalize-space()='Tamil Nadu']"
-                        )
+                        By.xpath("//*[normalize-space()='Tamil Nadu']")
                 )
         );
 
