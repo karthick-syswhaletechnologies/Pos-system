@@ -148,9 +148,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // STATUS CODE
-    // -------------------------------------------------------
+
 
     @Then("the response status code should be {int}")
     public void responseStatusCodeShouldBe(int expectedStatusCode) {
@@ -177,9 +177,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_001
-    // -------------------------------------------------------
+
 
     @Then("the response should contain Business Centre records")
     public void responseShouldContainBusinessCentreRecords() {
@@ -193,9 +193,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_002
-    // -------------------------------------------------------
+
 
     @Then("the Business Centre ID should be {int}")
     public void businessCentreIdShouldBe(int expectedId) {
@@ -211,9 +211,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_007
-    // -------------------------------------------------------
+
 
     @Then("the id field should be present")
     public void idFieldShouldBePresent() {
@@ -243,9 +243,8 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_008
-    // -------------------------------------------------------
 
     @Then("the organization_id field should be present")
     public void organizationIdFieldShouldBePresent() {
@@ -275,9 +274,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_009
-    // -------------------------------------------------------
+
 
     @Then("the branch_code field should be present")
     public void branchCodeFieldShouldBePresent() {
@@ -298,9 +297,8 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_010
-    // -------------------------------------------------------
 
     @Then("the branch_name field should be present")
     public void branchNameFieldShouldBePresent() {
@@ -330,9 +328,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_011
-    // -------------------------------------------------------
+
 
     @Then("the service_type field should be present")
     public void serviceTypeFieldShouldBePresent() {
@@ -352,9 +350,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_012
-    // -------------------------------------------------------
+
 
     @Then("the address field should be present")
     public void addressFieldShouldBePresent() {
@@ -402,9 +400,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_013
-    // -------------------------------------------------------
+
 
     @Then("the contact field should be present")
     public void contactFieldShouldBePresent() {
@@ -413,9 +411,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_014
-    // -------------------------------------------------------
+
 
     @Then("the email field should be present")
     public void emailFieldShouldBePresent() {
@@ -424,9 +422,8 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
     // BC_GET_015
-    // -------------------------------------------------------
+
 
     @Then("the website field should be present")
     public void websiteFieldShouldBePresent() {
@@ -435,9 +432,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_016
-    // -------------------------------------------------------
+
 
     @Then("the status field should be present")
     public void statusFieldShouldBePresent() {
@@ -467,9 +464,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_017
-    // -------------------------------------------------------
+
 
     @Then("the response Content-Type should be application/json")
     public void responseContentTypeShouldBeApplicationJson() {
@@ -485,9 +482,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_018
-    // -------------------------------------------------------
+
 
     @Then("the response time should be less than 2000 milliseconds")
     public void responseTimeShouldBeLessThan2000Milliseconds() {
@@ -508,9 +505,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_019
-    // -------------------------------------------------------
+
 
     @When("user sends a GET request without authentication")
     public void userSendsGetRequestWithoutAuthentication() {
@@ -526,9 +523,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_020
-    // -------------------------------------------------------
+
 
     @When("user sends a GET request with an invalid authentication token")
     public void userSendsGetRequestWithInvalidAuthenticationToken() {
@@ -548,9 +545,8 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_023
-    // -------------------------------------------------------
 
     @Then("the response should contain the expected structure")
     public void responseShouldContainExpectedStructure() {
@@ -621,9 +617,9 @@ public class BusinessCentreSteps {
     }
 
 
-    // -------------------------------------------------------
+
     // BC_GET_022
-    // -------------------------------------------------------
+
 
     @Then("the API branch_code should match the database branch_code")
     public void apiBranchCodeShouldMatchDatabaseBranchCode() {
