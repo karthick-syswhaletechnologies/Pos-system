@@ -5,7 +5,7 @@ Feature: Browser Launch
 
     Given Login to App and Navigate to Dashboard
 
-Scenario: Launch browser
+
 #  Given I lauch the chromeBrowser
 
   Scenario: Validate the Dropdown Details

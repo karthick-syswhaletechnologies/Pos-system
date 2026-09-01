@@ -9,10 +9,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.reporters.jq.Main;
-
-import java.util.List;
 
 public class Dropdownlist {
 
@@ -117,7 +113,8 @@ public class Dropdownlist {
 
 
 //        Organization
-        WebElement organization = driver.findElement(By.xpath("//select[@name='organization_id']"));
+        WebElement organization = driver.findElement(
+                By.xpath("//select[@name='organization_id']"));
         organization.click();
 
         // Create Select object

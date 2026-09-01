@@ -1,7 +1,11 @@
 package stepdefinitions;
 
+import api.BusinessCentreTest;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.qameta.allure.Allure;
+import io.qameta.allure.model.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 //import static com.pos.utils.DriverFactory.driver;
 public class BusniessCenter {
+
+    BusinessCentreTest bc = new BusinessCentreTest();
 
 
     WebDriver driver;
@@ -61,6 +67,8 @@ public class BusniessCenter {
         WebElement serviceType = driver.findElement(By.xpath("//input[@name='service_type']"));
         serviceType.sendKeys("123456");
 
+        Allure.step("enter_the_business_centre_fields entre successfully", Status.PASSED);
+
     }
     @Then("Enter the Branch Information,Address and Contact Number")
     public void enter_the_branch_information_address_and_contact_number() {
@@ -69,8 +77,5 @@ public class BusniessCenter {
 
 
     }
-    @Then("Save Business Centre List")
-    public void save_business_centre_list() {
 
-    }
 }

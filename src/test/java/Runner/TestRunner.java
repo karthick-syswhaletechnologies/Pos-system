@@ -17,8 +17,9 @@ import org.junit.runner.RunWith;
 //        tags = "@smoke",
         plugin = {
                 "pretty",
-                "html:target/cucumber-report.html"
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         },
+        tags = "@api",
         monochrome = true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
