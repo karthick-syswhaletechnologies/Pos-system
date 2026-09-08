@@ -12,7 +12,7 @@ public class Hooks {
 
         System.out.println("===== Starting Browser =====");
 
-        DriverFactory.initializeDriver();
+//        DriverFactory.initializeDriver();
     }
 
 
@@ -21,6 +21,6 @@ public class Hooks {
 
         System.out.println("===== Closing Browser =====");
 
-        DriverFactory.quitDriver();
+//        DriverFactory.quitDriver();
     }
 }
